@@ -8,7 +8,7 @@ import java.util.Scanner;
  * - Demonstrates the usage of the system.
  * - Tests adding, removing, and searching for books.
  *
- * @author
+ * @author Giovanni Opiyo
  */
 public class Main {
     public static void main(String[] args) {
