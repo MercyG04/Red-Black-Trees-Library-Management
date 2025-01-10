@@ -41,5 +41,15 @@ public class LibraryRedBlackTree implements LibraryManagement {
         Book book = bookTree.search(new Book(BookNo, null, null)); // Simplified for illustration
         return (book != null) ? book.getTitle() : null;
     }
+
+    @Override
+    public void deleteBook(String deleteIsbn) {
+
+    }
+
+    @Override
+    public void updateBook(String updateIsbn, String updateTitle, String updateAuthor) {
+
+    }
 }
 

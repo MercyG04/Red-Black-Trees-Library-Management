@@ -12,4 +12,9 @@ public interface LibraryManagement {
     void addBook(String isbn, String title, String author);
     boolean removeBook(String BookNo);
     String searchBook(String BookNo);
+
+    void deleteBook(String deleteIsbn);
+
+    void updateBook(String updateIsbn, String updateTitle, String updateAuthor);
+
 }
