@@ -20,7 +20,7 @@
  * @see RedBlackTree
  * @see Book
  *
- * @author
+ * @author Mwema Jonah Macharia
  */
 public class LibraryRedBlackTree implements LibraryManagement {
     private RedBlackTree<Book> bookTree = new RedBlackTree<>();
