@@ -29,7 +29,7 @@ public class Main {
 
             switch (choice) {
                 case 1: // Add Book
-                    System.out.print("Enter ISBN: ");
+                    System.out.print("Enter BooKnumber: ");
                     String addIsbn = scanner.nextLine();
                     System.out.print("Enter Title: ");
                     String addTitle = scanner.nextLine();
@@ -40,19 +40,19 @@ public class Main {
                 case 2: // Delete Book
                     System.out.print("Enter ISBN to delete: ");
                     String deleteIsbn = scanner.nextLine();
-                    library.deleteBook(deleteIsbn);
+                    library.deleteBook(deleteBookNo);
                     break;
                 case 3: // Update Book
-                    System.out.print("Enter ISBN to update: ");
+                    System.out.print("Enter BookNumber to update: ");
                     String updateIsbn = scanner.nextLine();
                     System.out.print("Enter New Title: ");
                     String updateTitle = scanner.nextLine();
                     System.out.print("Enter New Author: ");
                     String updateAuthor = scanner.nextLine();
-                    library.updateBook(updateIsbn, updateTitle, updateAuthor);
+                    library.updateBook(updateBookNo, updateTitle, updateAuthor);
                     break;
                 case 4: // Search Book
-                    System.out.print("Enter ISBN to search: ");
+                    System.out.print("Enter Book Number to search: ");
                     String searchIsbn = scanner.nextLine();
                     System.out.println("Result: " + library.searchBook(searchIsbn));
                     break;
