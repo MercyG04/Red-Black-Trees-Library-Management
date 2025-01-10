@@ -3,7 +3,7 @@
  * Represents a book in the library with a title, author, and BookNo.
  * Implements the Comparable interface to allow sorting by BookNo.
  *
- * @author
+ * @author Clinton Maina
  */
 public class Book implements Comparable<Book> {
     private String BookNo;
@@ -13,7 +13,7 @@ public class Book implements Comparable<Book> {
     /**
      * Constructor to create a new book.
      *
-     * @param isbn   - The International Standard Book Number.
+     * @param BookNo   - Book Number.
      * @param title  - The title of the book.
      * @param author - The author of the book.
      */
@@ -52,8 +52,8 @@ public class Book implements Comparable<Book> {
      * Compares this book with another book based on ISBN.
      *
      * @param other - The other book to compare to.
-     * @return A negative integer, zero, or a positive integer as this book's ISBN
-     *         is less than, equal to, or greater than the other book's ISBN.
+     * @return A negative integer, zero, or a positive integer as this book's number
+     *         is less than, equal to, or greater than the other book's number.
      */
     @Override
     public int compareTo(Book other) {
