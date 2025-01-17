@@ -8,7 +8,7 @@ import java.util.Scanner;
  * - Demonstrates the usage of the system.
  * - Tests adding, removing, and searching for books.
  *
- * @author Giovanni Opiyo
+ * @author Giovanni Opiyo 
  */
 public class Main {
     public static void main(String[] args) {
@@ -29,32 +29,46 @@ public class Main {
 
             switch (choice) {
                 case 1: // Add Book
-                    System.out.print("Enter BooKnumber: ");
-                    String addIsbn = scanner.nextLine();
+                    System.out.print("Enter Book Number: ");
+                    String addBookNo = scanner.nextLine();
                     System.out.print("Enter Title: ");
                     String addTitle = scanner.nextLine();
                     System.out.print("Enter Author: ");
                     String addAuthor = scanner.nextLine();
-                    library.addBook(addIsbn, addTitle, addAuthor);
+                    library.addBook(addBookNo, addTitle, addAuthor);
+                    System.out.println("Book added successfully.");
                     break;
                 case 2: // Delete Book
-                    System.out.print("Enter ISBN to delete: ");
-                    String deleteIsbn = scanner.nextLine();
-                    library.deleteBook(deleteBookNo);
+                    System.out.print("Enter Book Number to delete: ");
+                    String deleteBookNo = scanner.nextLine();
+                    if (library.deleteBook(deleteBookNo)) {
+                        System.out.println("Book deleted successfully.");
+                    } else {
+                        System.out.println("Book not found.");
+                    }
                     break;
                 case 3: // Update Book
-                    System.out.print("Enter BookNumber to update: ");
-                    String updateIsbn = scanner.nextLine();
+                    System.out.print("Enter Book Number to update: ");
+                    String updateBookNo = scanner.nextLine();
                     System.out.print("Enter New Title: ");
                     String updateTitle = scanner.nextLine();
                     System.out.print("Enter New Author: ");
                     String updateAuthor = scanner.nextLine();
-                    library.updateBook(updateBookNo, updateTitle, updateAuthor);
+                    if (library.updateBook(updateBookNo, updateTitle, updateAuthor)) {
+                        System.out.println("Book updated successfully.");
+                    } else {
+                        System.out.println("Book not found.");
+                    }
                     break;
                 case 4: // Search Book
                     System.out.print("Enter Book Number to search: ");
-                    String searchIsbn = scanner.nextLine();
-                    System.out.println("Result: " + library.searchBook(searchIsbn));
+                    String searchBookNo = scanner.nextLine();
+                    String result = library.searchBook(searchBookNo);
+                    if (result != null) {
+                        System.out.println("Book found: " + result);
+                    } else {
+                        System.out.println("Book not found.");
+                    }
                     break;
                 case 5: // Exit
                     System.out.println("Exiting the system. Goodbye!");
@@ -66,4 +80,3 @@ public class Main {
         }
     }
 }
-
